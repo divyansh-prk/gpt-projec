@@ -8,11 +8,11 @@ const Body = () => {
     const approuter  = createBrowserRouter([  
         {  
             path: "/",
-            element : "Login"
+            element : <Login />
     },
         {  
             path : "/browse",
-            element : "Browse"
+            element : <Browse />
     }
 
     ])
@@ -20,8 +20,7 @@ const Body = () => {
 
   return (
     <div>
-      <Login />
-      <Browse /> 
+      <RouterProvider router={approuter} />
     </div>
   )
 }
